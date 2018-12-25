@@ -8,12 +8,16 @@ import javafx.scene.Scene;
 import javafx.scene.layout.BorderPane;
 import javafx.scene.layout.GridPane;
 
-
+/*
+ * opens up home GUI and makes stage fixed size
+ */
 public class Main extends Application {
 	@Override
 	public void start(Stage primaryStage) {
 		try {
+			primaryStage.setTitle("Dice Roller Application");
 			primaryStage.setResizable(false);
+			
 			FXMLLoader loader = new FXMLLoader(getClass().getResource("/view/home.fxml"));
 			GridPane root = (GridPane)loader.load();
 			Scene scene = new Scene(root,400,600);
