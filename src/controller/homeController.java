@@ -30,7 +30,11 @@ public class homeController {
 	 *  Action method when roll button is clicked
 	 */
 	public void rollAction(ActionEvent event) throws IOException {
+		int total = 0;
 		
+		resultLabel.setText(""); //clears label field
+		
+		//error handling
 		if(numDiceField.getText().trim().equals("") || numSidesField.getText().trim().equals("")){
 			Alert alert = new Alert(AlertType.ERROR, "Both fields must be filled", ButtonType.OK);
 			alert.showAndWait();
@@ -64,5 +68,15 @@ public class homeController {
 			    return;
 			}	
 		}
+		
+		//roll simulation using loop and random number 
+		for(int i = 0; i < numDice; i++){
+			int rollResult = (int)(numSides * Math.random()) + 1;
+			total += rollResult;
+			resultLabel.setText(resultLabel.getText() + "Roll " + (i+1) + " with a " + numSides + " sided die: " + rollResult+"\n");
+		}
+		
+		resultLabel.setText(resultLabel.getText() + "Total of all rolls: " + total + "\n");
+		
 	}
 }
