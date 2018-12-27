@@ -1,23 +1,20 @@
+/*
+ * Dustin Cheung
+ * Dice Roller Program: Utilizing JavaFx to create a clean GUI that allows a user to simulate rolls with different number of dies 
+ * and dies of different number of sides.  The output returns the number rolled for each die and the sum of all rolls.
+ */
 package controller;
 
 import java.io.IOException;
-import java.io.Serializable;
-import java.net.URL;
-import java.util.ResourceBundle;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
-import javafx.fxml.FXMLLoader;
-import javafx.fxml.Initializable;
-import javafx.scene.Node;
-import javafx.scene.Parent;
-import javafx.scene.Scene;
 import javafx.scene.control.Alert;
 import javafx.scene.control.Button;
 import javafx.scene.control.ButtonType;
 import javafx.scene.control.Label;
 import javafx.scene.control.TextField;
 import javafx.scene.control.Alert.AlertType;
-import javafx.stage.Stage;
+
 
 public class homeController {
 	
